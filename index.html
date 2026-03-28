@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURE BAKES 🥐🎀</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo" onclick="showPage('home')">BURE BAKES</div>
+        <div class="nav-links">
+            <button onclick="showPage('about')">About</button>
+            <button onclick="showPage('menu')">Menu</button>
+            <button onclick="showPage('faq')">FAQ</button>
+            <button onclick="showPage('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <section id="home" class="page active-page">
+        <div class="hero-content">
+            <h1 class="main-title">Freshly baked. Boldly flavored. Made to share!</h1>
+            <p class="hero-subtext">The cutest bakery in Gading Serpong, serving up heart and salt bread daily. ✨</p>
+            <button class="cta-button" onclick="showPage('menu')">Explore the Menu 🎀</button>
+        </div>
+    </section>
+
+    <section id="about" class="page">
+        <div class="content-wrapper">
+            <h2 class="page-header">Our Story</h2>
+            <div class="about-card">
+                <p>At our bakery, we believe the simplest ingredients create the most unforgettable flavors. What started as a passion for baking fresh, comforting bread has grown into a space where tradition meets trend — and every bite feels special.</p>
+                <p>Bure Bakes was founded as a collaborative project for our Multimedia class by <strong>Cherish, Brandon, Kenji, Juan, and Michelle</strong>. We shared a vision of creating a digital space that feels as warm and inviting as a real kitchen, blending our love for aesthetics with the art of baking.</p>
+                <p>Whether you’re stopping by for your morning bread, an afternoon treat, or a sweet gift for someone special, we bake everything with care, quality ingredients, and a whole lot of heart.</p>
+                <p class="tagline-highlight">Freshly baked. Boldly flavored. Made to share!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="page">
+        <div class="content-wrapper">
+            <h2 class="page-header">The Bakery Menu</h2>
+            
+            <div class="menu-section">
+                <h3 class="category-name">Salt Breads</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="salt-bread.jpg">
+                        <h4>Original Salt Bread</h4>
+                        <p class="price">Rp 18.000</p>
+                        <button class="add-btn" onclick="addToCart('Original Salt Bread', 18000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="garlic-cream-cheese.jpg">
+                        <h4>Garlic Cream Cheese Salt Bread</h4>
+                        <p class="price">Rp 28.000</p>
+                        <button class="add-btn" onclick="addToCart('Garlic Salt Bread', 28000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="dubai-choco-saltbread.jpg">
+                        <h4>Dubai Chocolate Salt Bread</h4>
+                        <p class="price">Rp 45.000</p>
+                        <button class="add-btn" onclick="addToCart('Dubai Salt Bread', 45000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="sea-salty-saltbread.jpg">
+                        <h4>Sea Salty Salt Bread</h4>
+                        <p class="price">Rp 22.000</p>
+                        <button class="add-btn" onclick="addToCart('Sea Salt Bread', 22000)">Add to Basket 🧺</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h3 class="category-name">Other Pastries</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="brownies-mochi.jpg">
+                        <h4>Mochi Brownies</h4>
+                        <p class="dietary">vegetarian & gluten-free!</p>
+                        <p class="price">Rp 35.000</p>
+                        <button class="add-btn" onclick="addToCart('Mochi Brownie', 35000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="vegan-cookies.jpg">
+                        <h4>Vegan Cookies</h4>
+                        <p class="price">Rp 25.000</p>
+                        <button class="add-btn" onclick="addToCart('Vegan Cookie', 25000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="fruit-mousses.jpg">
+                        <h4>Fruit-shaped Mousses</h4>
+                        <p class="price">Rp 55.000</p>
+                        <button class="add-btn" onclick="addToCart('Fruit Mousse', 55000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="dubai-chewy.jpg">
+                        <h4>Dubai Chewy Cookie</h4>
+                        <p class="price">Rp 40.000</p>
+                        <button class="add-btn" onclick="addToCart('Dubai Cookie', 40000)">Add to Basket 🧺</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h3 class="category-name">Drinks</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="strawberry-matcha.jpg">
+                        <h4>Strawberry Matcha</h4>
+                        <p class="price">Rp 38.000</p>
+                        <button class="add-btn" onclick="addToCart('Strawb Matcha', 38000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="bubble-tea.jpg">
+                        <h4>Bubble Tea</h4>
+                        <p class="dietary">Milk Tea, Strawberry, Matcha, Chocolate, Banana</p>
+                        <p class="price">Rp 32.000</p>
+                        <button class="add-btn" onclick="addToCart('Boba', 32000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="iced-americano.jpg">
+                        <h4>Iced Americano</h4>
+                        <p class="price">Rp 25.000</p>
+                        <button class="add-btn" onclick="addToCart('Iced Americano', 25000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="blossom-drink.jpg">
+                        <h4>Blossom Drink</h4>
+                        <p class="price">Rp 35.000</p>
+                        <button class="add-btn" onclick="addToCart('Blossom Drink', 35000)">Add to Basket 🧺</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="page">
+        <div class="content-wrapper">
+            <h2 class="page-header">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <h3 class="faq-cat">[ Ordering and Customization ]</h3>
+                <details>
+                    <summary>Do I need to pre-order my bread?</summary>
+                    <p>While we keep our shelves stocked daily, our signature sourdough and specialty loaves tend to fly out the door by noon. If you have your heart set on a specific bake, we recommend placing an order through our site 24 hours in advance.</p>
+                </details>
+                <details>
+                    <summary>Do you offer custom cakes or large event orders?</summary>
+                    <p>We love being part of your celebrations! We offer custom cakes and catering platters for events. Please reach out via our <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4NIEEuxH1ew4L0pxrPQ_TFQLTnWO5hKrmBQ3fQjaRp2yXFw/viewform?usp=sharing&ouid=104053706259620888476" target="_blank" style="color: var(--dark-pink); font-weight: bold;">[Contact Form]</a> at least 7 days prior to your event so we can perfect the details.</p>
+                </details>
+                <h3 class="faq-cat">[ Ingredients and Dietary Needs ]</h3>
+                <details>
+                    <summary>Do you have gluten-free or vegan options?</summary>
+                    <p>We sure do! We bake a selection of vegan cookies and gluten-friendly brownies daily. However, please note that we are a traditional flour-based bakery; while we do our best to prevent cross-contamination, we cannot guarantee a 100% flour-free environment for those with severe allergies.</p>
+                </details>
+                <details>
+                    <summary>Where do you source your ingredients?</summary>
+                    <p>Quality is everything to us. We use organic, stone-ground flour from local mills and seasonal fruits from nearby farms.</p>
+                </details>
+                <h3 class="faq-cat">[ Shipping & Pickup ]</h3>
+                <details>
+                    <summary>Do you ship your treats nationwide?</summary>
+                    <p>Currently, we focus on serving our local community through in-store pickup and local delivery in Gading Serpong. Bread is best when it's fresh!</p>
+                </details>
+                <details>
+                    <summary>How should I store my bread to keep it fresh?</summary>
+                    <p>Because we don’t use artificial preservatives, our bread is best enjoyed within 2–3 days. Store it in a cool, dry place or slice and freeze it for later!</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="page">
+        <div class="content-wrapper">
+            <h2 class="page-header">Get In Touch!</h2>
+            <div class="contact-layout">
+                <p class="contact-intro">We’re usually elbow-deep in flour, but we’d love to hear from you!</p>
+                <div class="contact-card">
+                    <h4>📍 Visit the Bakery</h4>
+                    <p>Bure Bakes @ Ruko Maggiore Junction Jl. Pelangi Utama No. 88, Gading Serpong<br>Tangerang, Banten 15810</p>
+                </div>
+                <div class="contact-card">
+                    <h4>⏰ Baking Hours</h4>
+                    <p><strong>Monday:</strong> Closed</p>
+                    <p><strong>Tuesday – Friday:</strong> 08:00 AM – 18:00 PM</p>
+                    <p><strong>Saturday – Sunday:</strong> 07:30 AM – 16:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-drawer" class="hidden">
+        <h3>My Basket 🧺</h3>
+        <ul id="cart-items-list"></ul>
+        <div class="cart-footer">
+            <p>Total: <span id="cart-total">Rp 0</span></p>
+            <button onclick="checkout()">Check out ✨</button>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 BURE BAKES | Made with 💖 for Multimedia Class</p></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
