@@ -81,3 +81,28 @@ function checkout() {
         }, 500);
     }
 }
+
+function addBobaToCart() {
+    const select = document.getElementById("boba-flavour");
+    const flavour = select.value;
+
+    if (!flavour) {
+        alert("Please select a flavour first! 🧋");
+        return;
+    }
+
+    addToCart("Bubble Tea (" + flavour + ")", 32000);
+}
+
+function updateFlavourColor(select) {
+    const colors = {
+        "Milk Tea": "#c69c6d",
+        "Strawberry": "#ff6b9a",
+        "Matcha": "#7bc96f",
+        "Chocolate": "#6b3e26",
+        "Banana": "#f2d16b"
+    };
+
+    select.style.backgroundColor = colors[select.value] || "white";
+    select.style.color = select.value ? "white" : "black";
+}

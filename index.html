@@ -124,12 +124,23 @@
                         <button class="add-btn" onclick="addToCart('Strawb Matcha', 38000)">Add to Basket 🧺</button>
                     </div>
                     <div class="menu-item">
-                        <img src="assets/bubble-tea.jpg">
-                        <h4>Bubble Tea</h4>
-                        <p class="dietary">Milk Tea, Strawberry, Matcha, Chocolate, Banana</p>
-                        <p class="price">Rp 32.000</p>
-                        <button class="add-btn" onclick="addToCart('Boba', 32000)">Add to Basket 🧺</button>
-                    </div>
+    <img src="assets/bubble-tea.jpg">
+    <h4>Bubble Tea</h4>
+
+    <p class="price">Rp 32.000</p>
+
+    <!-- FLAVOUR SELECT -->
+    <select class="flavour-select" id="boba-flavour" onchange="updateFlavourColor(this)">
+        <option value="">Select flavour</option>
+        <option value="Milk Tea">Milk Tea</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Matcha">Matcha</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Banana">Banana</option>
+    </select>
+
+    <button class="add-btn" onclick="addBobaToCart()">Add to Basket 🧺</button>
+</div>
                     <div class="menu-item">
                         <img src="assets/iced-americano.jpg">
                         <h4>Iced Americano</h4>
