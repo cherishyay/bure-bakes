@@ -1,27 +1,4 @@
-// 1. PAGE SWITCHER
-function showPage(pageId) {
-    console.log("Switching to page:", pageId); // For debugging
-    
-    // Hide all pages
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(p => p.classList.remove('active-page'));
 
-    // Show the selected one
-    const target = document.getElementById(pageId);
-    if (target) {
-        target.classList.add('active-page');
-    }
-
-    // Cart visibility
-    const cart = document.getElementById('cart-drawer');
-    if (pageId === 'menu') {
-        cart.classList.remove('hidden');
-    } else {
-        cart.classList.add('hidden');
-    }
-
-    window.scrollTo(0, 0);
-}
 
 // SPARKLE CLICK INTERACTION
 document.addEventListener('click', (e) => {
@@ -105,4 +82,10 @@ function updateFlavourColor(select) {
 
     select.style.backgroundColor = colors[select.value] || "white";
     select.style.color = select.value ? "white" : "black";
+}
+
+if (window.location.pathname.includes("menu.html")) {
+    document.getElementById('cart-drawer')?.classList.remove('hidden');
+} else {
+    document.getElementById('cart-drawer')?.classList.add('hidden');
 }

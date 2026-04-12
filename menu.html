@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURE BAKES 🥐🎀</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">BURE BAKES</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="menu.html">Menu</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section id="menu" class="page">
+        <div class="content-wrapper">
+            <h2 class="page-header">The Bakery Menu</h2>
+            
+            <div class="menu-section">
+                <h3 class="category-name">Salt Breads</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="assets/salt-bread.jpg">
+                        <h4>Original Salt Bread</h4>
+                        <p class="price">Rp 18.000</p>
+                        <button class="add-btn" onclick="addToCart('Original Salt Bread', 18000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="assets/garlic-cream-cheese.jpg">
+                        <h4>Garlic Cream Cheese Salt Bread</h4>
+                        <p class="price">Rp 28.000</p>
+                        <button class="add-btn" onclick="addToCart('Garlic Salt Bread', 28000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="assets/dubai-choco-saltbread.jpg">
+                        <h4>Dubai Chocolate Salt Bread</h4>
+                        <p class="price">Rp 45.000</p>
+                        <button class="add-btn" onclick="addToCart('Dubai Salt Bread', 45000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="assets/sea-salty-saltbread.jpg">
+                        <h4>Sea Salty Salt Bread</h4>
+                        <p class="price">Rp 22.000</p>
+                        <button class="add-btn" onclick="addToCart('Sea Salt Bread', 22000)">Add to Basket 🧺</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h3 class="category-name">Other Pastries</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="assets/brownies-mochi.jpg">
+                        <h4>Mochi Brownies</h4>
+                        <p class="dietary">vegetarian & gluten-free!</p>
+                        <p class="price">Rp 35.000</p>
+                        <button class="add-btn" onclick="addToCart('Mochi Brownie', 35000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="assets/vegan-cookies.jpg">
+                        <h4>Vegan Cookies</h4>
+                        <p class="price">Rp 25.000</p>
+                        <button class="add-btn" onclick="addToCart('Vegan Cookie', 25000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="assets/fruit-mousses.jpg">
+                        <h4>Fruit-shaped Mousses</h4>
+                        <p class="price">Rp 55.000</p>
+                        <button class="add-btn" onclick="addToCart('Fruit Mousse', 55000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="assets/dubai-chewy.jpg">
+                        <h4>Dubai Chewy Cookie</h4>
+                        <p class="price">Rp 40.000</p>
+                        <button class="add-btn" onclick="addToCart('Dubai Cookie', 40000)">Add to Basket 🧺</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h3 class="category-name">Drinks</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="assets/strawberry-matcha.jpg">
+                        <h4>Strawberry Matcha</h4>
+                        <p class="price">Rp 38.000</p>
+                        <button class="add-btn" onclick="addToCart('Strawb Matcha', 38000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+    <img src="assets/bubble-tea.jpg">
+    <h4>Bubble Tea</h4>
+
+    <p class="price">Rp 32.000</p>
+
+    <!-- FLAVOUR SELECT -->
+    <select class="flavour-select" id="boba-flavour" onchange="updateFlavourColor(this)">
+        <option value="">Select flavour</option>
+        <option value="Milk Tea">Milk Tea</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Matcha">Matcha</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Banana">Banana</option>
+    </select>
+
+    <button class="add-btn" onclick="addBobaToCart()">Add to Basket 🧺</button>
+</div>
+                    <div class="menu-item">
+                        <img src="assets/iced-americano.jpg">
+                        <h4>Iced Americano</h4>
+                        <p class="price">Rp 25.000</p>
+                        <button class="add-btn" onclick="addToCart('Iced Americano', 25000)">Add to Basket 🧺</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="assets/blossom-drink.jpg">
+                        <h4>Blossom Drink</h4>
+                        <p class="price">Rp 35.000</p>
+                        <button class="add-btn" onclick="addToCart('Blossom Drink', 35000)">Add to Basket 🧺</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="cart-drawer" class="hidden">
+        <h3>My Basket 🧺</h3>
+        <ul id="cart-items-list"></ul>
+        <div class="cart-footer">
+            <p>Total: <span id="cart-total">Rp 0</span></p>
+            <button onclick="checkout()">Check out ✨</button>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 BURE BAKES | Made with 💖 for Multimedia Class</p></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
