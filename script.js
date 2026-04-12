@@ -53,7 +53,7 @@ function checkout() {
         });
 
         setTimeout(() => {
-            alert("BURE BAKES: ORDER SUCCESS! ✨\nTotal: Rp " + total.toLocaleString() + "\nSee you at Maggiore Junction, bestie! 🎀");
+            alert("ORDER SUCCESS! ✨\nTotal: Rp " + total.toLocaleString() + "\nSee you at Maggiore Junction, bestie! 🎀");
             location.reload(); 
         }, 500);
     }
