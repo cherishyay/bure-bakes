@@ -216,3 +216,19 @@ footer { padding: 40px; text-align: center; font-size: 0.8rem; opacity: 0.6; }
     display: inline-block;
     text-decoration: none;
 }
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
